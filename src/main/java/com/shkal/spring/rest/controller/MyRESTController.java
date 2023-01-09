@@ -35,4 +35,17 @@ public class MyRESTController {
         return employee;
     }
 
+    @PostMapping("/employees")
+    public Employee addNewEmployee(@RequestBody Employee employee) {
+        employeeService.saveNewEmployee(employee);
+        return employee;
+    }
+
+
+    @PutMapping("/employees")
+    public Employee changeEmployee(@RequestBody Employee employee) {
+        employeeService.saveNewEmployee(employee);
+        return employee;
+    }
+
 }
